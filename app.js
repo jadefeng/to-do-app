@@ -4,6 +4,13 @@
    const toDoList = document.getElementById('toDoList');
 
 
+var delete = document.getElementsByClassName("delete");
+
+
+for (var i = 0; i < classname.length; i++) {
+    classname[i].addEventListener('click', myFunction, false);
+}
+
   addToDoForm.addEventListener('submit', () => {
     event.preventDefault();
 
@@ -15,15 +22,22 @@
 
     // create a new input
     let checkbox = document.createElement('input');
+    let deleteButton = document.createElement('button');
 
     // set the input's type to checkbox
     checkbox.type = "checkbox";
+
+    // delete button
+    deleteButton.innerHTML = "Delete"
+    deleteButton.class = "delete"
+    // deleteButton.onclick = removeOption()
 
     // set the title
     newLi.textContent = title;
 
     // attach the checkbox to the li
-    newLi.appendChild(checkbox);
+    newLi.appendChild(checkbox)
+    newLi.appendChild(deleteButton);
 
 
     // attach the li to the ul
