@@ -3,14 +3,6 @@
    const newToDoText = document.getElementById('newToDoText');
    const toDoList = document.getElementById('toDoList');
 
-
-var delete = document.getElementsByClassName("delete");
-
-
-for (var i = 0; i < classname.length; i++) {
-    classname[i].addEventListener('click', myFunction, false);
-}
-
   addToDoForm.addEventListener('submit', () => {
     event.preventDefault();
 
@@ -30,8 +22,14 @@ for (var i = 0; i < classname.length; i++) {
     // delete button
     deleteButton.innerHTML = "Delete"
     deleteButton.class = "delete"
-    // deleteButton.onclick = removeOption()
 
+    deleteButton.addEventListener(`click`, () => {
+      event.preventDefault(); 
+      // console.log("clicked on button!")
+      // console.log(newLi);
+      newLi.remove(); 
+    })
+    
     // set the title
     newLi.textContent = title;
 
@@ -43,14 +41,12 @@ for (var i = 0; i < classname.length; i++) {
     // attach the li to the ul
     toDoList.appendChild(newLi);
 
-
     //empty the input
     newToDoText.value = '';    
 
   });
 
  }
-
 
 window.onload = function() {
    // alert("The window has loaded!");
