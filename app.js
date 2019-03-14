@@ -11,9 +11,11 @@
 
     // create a new li
     let newLi = document.createElement('li');
+    newLi.classList.add("mdl-list__item");
 
     // create a new input
     let checkbox = document.createElement('input');
+
     let deleteButton = document.createElement('button');
 
     // set the input's type to checkbox
@@ -21,12 +23,9 @@
 
     // delete button
     deleteButton.innerHTML = "Delete"
-    deleteButton.class = "delete"
 
     deleteButton.addEventListener(`click`, () => {
       event.preventDefault(); 
-      // console.log("clicked on button!")
-      // console.log(newLi);
       newLi.remove(); 
     })
     
