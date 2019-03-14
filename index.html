@@ -1,50 +1,22 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+ <html>
    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>To-Do App</title>
-      <!-- Material Design Lite -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-      <style type="text/css">
-         .container {
-         width: 800px;
-         margin:0 auto;
-         background-color: white;
-         }
-         #toDoList {
-         box-sizing: border-box;
-         width: 500px;
-         }
-         input[type='checkbox'] { 
-         margin: 10px; 
-         }
-         .deleteButton {
-         position: absolute; 
-         right: 0;
-         }
-      </style>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>To-Do App</title>
    </head>
-
    <body>
-      <div class="container">
-         <h1>To-Do App</h1>
-         
-         <main class="demo-main mdl-layout__content">
-            <form action="#" id="addToDoForm" autocomplete="off" >
-               <div class="mdl-textfield mdl-textfield--floating-label mdl-js-textfield ">
-                  <input type="text" class="mdl-textfield__input" id="newToDoText">
-                  <label for="newToDoText" class="mdl-textfield__label">To-Do Action</label>
-               </div>
-               <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-               Submit
-               </button>
-            </form>
-            <ul id="toDoList" class="demo-list-control mdl-list">
-            </ul>
-         </main>
-      </div>
-      <script src="app.js"></script>
+     <h1>To-Do App</h1>
+
+   <form id="addToDoForm">
+     <label for="newToDoText">New To-Do:</label>
+     <input type="text" id="newToDoText">
+     <button type="submit">Add To-Do!</button>
+   </form>
+
+  <ul id="toDoList">
+  </ul>
+
+ <script src="app.js"></script>
+
    </body>
-</html>
+ </html> 
