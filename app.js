@@ -20,9 +20,16 @@
 
     // set the input's type to checkbox
     checkbox.type = "checkbox";
+    checkbox.classList.add("mdl-checkbox__input")
+
 
     // delete button
     deleteButton.innerHTML = "Delete"
+    deleteButton.classList.add("mdl-button")
+    deleteButton.classList.add("mdl-js-button")
+    deleteButton.classList.add("mdl-button--raised")
+    deleteButton.classList.add("mdl-button--colored")
+    deleteButton.classList.add("deleteButton")
 
     deleteButton.addEventListener(`click`, () => {
       event.preventDefault(); 
@@ -33,7 +40,7 @@
     newLi.textContent = title;
 
     // attach the checkbox to the li
-    newLi.appendChild(checkbox)
+    newLi.prepend(checkbox);
     newLi.appendChild(deleteButton);
 
 
